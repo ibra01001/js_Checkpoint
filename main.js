@@ -1,3 +1,4 @@
+/*
 let NormalString = "Hello im ibrahim";
 
 // Count : Method 01
@@ -33,24 +34,74 @@ function capitalize(NormalString) {
     console.log('Capitalize : ' + BigWord)
 }
 capitalize(NormalString)
+*/
 
-// max value and min value
-const Numbers = [0, 1, 6, 3, 4, 5];
+// Max Min Values, Method 01: With Two Conditions
+let Numbers = [4, 9, 6, 1, 4, 5];
 
-function Values(Numbers){
-    
-    let min = null
-    for (i = 0; i >= Numbers.length; i++) {
-        for (j = 0; j > Numbers.length; j++) {
-            if (j > Numbers[i]) {
-              console.log("yes") 
-               
-            }else 
-                console.log("no")
-
-
+function MinMax(Numbers){
+    min = Numbers[0]
+    max = Numbers[0]
+    for (i = 1; i < Numbers.length; i++) {
+        if (min >= Numbers[i]) {
+            min = Numbers[i]
+        }
+        if (max <= Numbers[i]) {
+            max = Numbers[i]
         }
     }
-    console.log(Numbers[2])
+    console.log('Min using two conditions = ', min)
+    console.log('Max using two conditions = ', max)
 }
-Values(Numbers)
+MinMax(Numbers)
+
+// Max Min Values, Method 02: using One Condition
+function MinMax2(Numbers) {
+    let min = Numbers[0];
+    let max = Numbers[0];
+
+    for (let i = 1; i < Numbers.length; i++) {
+        if (Numbers[i] < min) {
+            min = Numbers[i];
+        } else if (Numbers[i] > max) {
+            max = Numbers[i];
+        }
+    }
+
+    console.log('Min using one condition = ', min)
+    console.log('Max using one condition = ', max)
+}
+
+MinMax2(Numbers);
+
+// Max Min Values, Method 03: using single condition expression
+function MinMax3(Numbers) {
+    let min = Numbers[0];
+    let max = Numbers[0];
+
+    for (let i = 1; i < Numbers.length; i++) {
+        if (Numbers[i] < min || Numbers[i] > max) {
+            min = Numbers[i] < min ? Numbers[i] : min;
+            max = Numbers[i] > max ? Numbers[i] : max;
+        }
+    }
+
+    console.log('Min using single condition expression = ', min)
+    console.log('Max using single condition expression = ', max)
+}
+
+MinMax3(Numbers);
+
+function Sum(Numbers){
+    
+    sum = 0
+
+for ( i = 0; i< Numbers.length; i++){
+  sum = Numbers[i] + sum
+  
+} 
+    
+
+console.log('the sum is :',sum)
+}
+Sum(Numbers)
