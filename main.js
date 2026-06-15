@@ -39,7 +39,7 @@ capitalize(NormalString)
 // Max Min Values, Method 01: With Two Conditions
 let Numbers = [4, 9, 6, 1, 4, 5];
 
-function MinMax(Numbers){
+function MinMax(Numbers) {
     min = Numbers[0]
     max = Numbers[0]
     for (i = 1; i < Numbers.length; i++) {
@@ -92,35 +92,43 @@ function MinMax3(Numbers) {
 
 MinMax3(Numbers);
 
-function Sum(Numbers){
-    
+function Sum(Numbers) {
+
     sum = 0
 
-for ( i = 0; i< Numbers.length; i++){
-  sum = Numbers[i] + sum
-  
-} 
-    
+    for (i = 0; i < Numbers.length; i++) {
+        sum = Numbers[i] + sum
 
-console.log('the sum is :',sum)
+    }
+
+
+    console.log('the sum is :', sum)
 }
 Sum(Numbers)
 
 
 // filter
-let Number_2 = [0,1,2,3,3,5,6,7,8,9,10,11,12,13]
+Number_2 = [-1,0,2,3,3,5,6,7,8,9,10,12,-13,-4]
 
-function filter(Numbers2){
-        
-        filtered = []
-        for(i = 0 ; i < Number_2.length; i++){
-            if(i % 2 === 0){
-                console.log('hhhh',Number_2[i])
-            }else{
-                console.log(Number_2[i])
-            }
+function filter(Numbers2) {
+
+    odds = []
+    evens = []
+
+    for (i = 0; i < Number_2.length; i++) {
+        if (Numbers2[i] % 2 === -1 || Numbers2[i] % 2 === 1 )  {
+            odds.push(Numbers2[i])
+              
+        } else {
+            evens.push(Numbers2[i])
         }
-    
+
+    }
+    console.log(odds,evens)
+
 }
+
+
 filter(Number_2)
 
+console.log(-13 % 2) 
