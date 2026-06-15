@@ -105,3 +105,22 @@ for ( i = 0; i< Numbers.length; i++){
 console.log('the sum is :',sum)
 }
 Sum(Numbers)
+
+
+// filter
+let Number_2 = [0,1,2,3,3,5,6,7,8,9,10,11,12,13]
+
+function filter(Numbers2){
+        
+        filtered = []
+        for(i = 0 ; i < Number_2.length; i++){
+            if(i % 2 === 0){
+                console.log('hhhh',Number_2[i])
+            }else{
+                console.log(Number_2[i])
+            }
+        }
+    
+}
+filter(Number_2)
+
