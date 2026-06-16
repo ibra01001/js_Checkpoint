@@ -131,4 +131,24 @@ function filter(Numbers2) {
 
 filter(Number_2)
 
-console.log(-13 % 2) 
+// factorial 
+
+let Number_3 = 3
+ FactorialNumber = 0
+ finale = 1
+function factorial(Number_3) {
+    
+    if(Number_3 > 0){
+    for(i = 0; i <= Number_3 - 1; i++){
+        
+        FactorialNumber = Number_3 - i 
+        finale = FactorialNumber * finale
+        
+    }
+  
+    console.log(i)
+    }
+      console.log(FactorialNumber)
+      console.log(finale)
+}
+factorial(Number_3)
