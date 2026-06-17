@@ -133,7 +133,7 @@ filter(Number_2)
 
 // factorial 
 
-let Number_3 = 0
+let Number_3 = 3
 FactorialNumber = 0
 finale = 1
 function factorial(Number_3) {
@@ -143,35 +143,32 @@ function factorial(Number_3) {
 
             FactorialNumber = Number_3 - i
             finale = FactorialNumber * finale
-
         }
-
-        console.log(i)
     }
-    console.log(FactorialNumber)
-    console.log('factorial number of ', Number_3, ': ', finale)
+    console.log(`the factorial number of ${Number_3} is ${finale}`)
 }
 factorial(Number_3)
 
 // prime number 
 
 Number_4 = 19
-
+prime = 0
 result = ''
 TestingArray = []
 const checking = (Number_4) => {
     for (i = 1; i <= Number_4; i++) {
 
-        prime = 0
+        
         prime = Number_4 / i
 
         if (prime % 1 === 0) { //check how many natural number 
             TestingArray.push('natural number') // make an array and add a string every time there is a natural number 
             if (TestingArray.length === 2) { // counting how many string in the array if there is more than two its not a prime number 
 
-                result = ('the number :'.Number_4, 'is a prime number')
+                result = `the number ${Number_4} is a prime number`
+                
             } else {
-                result = ('the number :'.Number_4, 'is not a prime number')
+                result = `the number ${Number_4}is not a prime Number`
             }
 
         }
