@@ -1,4 +1,4 @@
-/*
+
 let NormalString = "Hello im ibrahim";
 
 // Count : Method 01
@@ -34,7 +34,7 @@ function capitalize(NormalString) {
     console.log('Capitalize : ' + BigWord)
 }
 capitalize(NormalString)
-*/
+
 
 // Max Min Values, Method 01: With Two Conditions
 let Numbers = [4, 9, 6, 1, 4, 5];
@@ -108,7 +108,7 @@ Sum(Numbers)
 
 
 // filter
-Number_2 = [-1,0,2,3,3,5,6,7,8,9,10,12,-13,-4]
+Number_2 = [-1, 0, 2, 3, 3, 5, 6, 7, 8, 9, 10, 12, -13, -4]
 
 function filter(Numbers2) {
 
@@ -116,15 +116,15 @@ function filter(Numbers2) {
     evens = []
 
     for (i = 0; i < Number_2.length; i++) {
-        if (Numbers2[i] % 2 === -1 || Numbers2[i] % 2 === 1 )  {
+        if (Numbers2[i] % 2 === -1 || Numbers2[i] % 2 === 1) {
             odds.push(Numbers2[i])
-              
+
         } else {
             evens.push(Numbers2[i])
         }
 
     }
-    console.log(odds,evens)
+    console.log(odds, evens)
 
 }
 
@@ -133,22 +133,54 @@ filter(Number_2)
 
 // factorial 
 
-let Number_3 = 3
- FactorialNumber = 0
- finale = 1
+let Number_3 = 0
+FactorialNumber = 0
+finale = 1
 function factorial(Number_3) {
-    
-    if(Number_3 > 0){
-    for(i = 0; i <= Number_3 - 1; i++){
-        
-        FactorialNumber = Number_3 - i 
-        finale = FactorialNumber * finale
-        
+
+    if (Number_3 >= 0) {
+        for (i = 0; i <= Number_3 - 1; i++) { 
+
+            FactorialNumber = Number_3 - i
+            finale = FactorialNumber * finale
+
+        }
+
+        console.log(i)
     }
-  
-    console.log(i)
-    }
-      console.log(FactorialNumber)
-      console.log(finale)
+    console.log(FactorialNumber)
+    console.log('factorial number of ', Number_3, ': ', finale)
 }
 factorial(Number_3)
+
+// prime number 
+
+Number_4 = 19
+
+result = ''
+TestingArray = []
+const checking = (Number_4) => {
+    for (i = 1; i <= Number_4; i++) {
+
+        prime = 0
+        prime = Number_4 / i
+
+        if (prime % 1 === 0) { //check how many natural number 
+            TestingArray.push('natural number') // make an array and add a string every time there is a natural number 
+            if (TestingArray.length === 2) { // counting how many string in the array if there is more than two its not a prime number 
+
+                result = ('the number :'.Number_4, 'is a prime number')
+            } else {
+                result = ('the number :'.Number_4, 'is not a prime number')
+            }
+
+        }
+
+
+    }
+    console.log(result)
+    
+
+
+}
+checking(Number_4)
