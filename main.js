@@ -1,4 +1,4 @@
-
+/*
 let NormalString = "Hello im ibrahim";
 
 // Count : Method 01
@@ -124,7 +124,7 @@ function filter(Numbers2) {
         }
 
     }
-    console.log(odds, evens)
+    console.log(`-odds numbers are ${odds} \n-evens numbers are ${evens}`)
 
 }
 
@@ -145,7 +145,7 @@ function factorial(Number_3) {
             finale = FactorialNumber * finale
         }
     }
-    console.log(`the factorial number of ${Number_3} is ${finale}`)
+    console.log(`-the factorial number of ${Number_3} is ${finale}`)
 }
 factorial(Number_3)
 
@@ -165,10 +165,10 @@ const checking = (Number_4) => {
             TestingArray.push('natural number') // make an array and add a string every time there is a natural number 
             if (TestingArray.length === 2) { // counting how many string in the array if there is more than two its not a prime number 
 
-                result = `the number ${Number_4} is a prime number`
+                result = `-the number ${Number_4} is a prime number`
                 
             } else {
-                result = `the number ${Number_4}is not a prime Number`
+                result = `-the number ${Number_4}is not a prime Number`
             }
 
         }
@@ -181,3 +181,80 @@ const checking = (Number_4) => {
 
 }
 checking(Number_4)
+*/
+
+/*
+// fibonacci 
+// npm install prompt-sync
+
+const prompt = require('prompt-sync')();
+
+
+let number = prompt("Give me a number: ")
+n = Number(number)
+
+function fibonacci(n){
+    if (n === 0){
+        return 0
+    }
+    if (n === 1){
+        return 1
+    }
+    
+    return fibonacci(n-1) + fibonacci(n-2)
+    // Fn = Fn-1 +Fn-2
+}
+
+console.log("F("+n+") = " + fibonacci(n))
+*/
+
+/*
+// Supp Exercise F(x,y)
+const prompt = require('prompt-sync')();
+
+ numberX = prompt("Give X a value : ")
+ numberY = prompt("Give Y a value : ")
+ x = Number(numberX)
+ y = Number(numberY)
+
+function F(x, y) {
+    if ((x === 0 && y === 0) || (x === 1 && y === 0)) {
+        return 1;
+    }
+
+    if (x < 0 || y < 0) {
+        return 0;
+    }
+
+    return F(x - 1, y)
+         + F(x - 2, y)
+         + F(x, y - 1)
+         + F(x, y - 2);
+}
+
+ console.log("F(" + x + "," + y + ") = " + F(x,y))
+ */
+
+
+
+
+// Factorial with recursive Method 02
+const prompt = require('prompt-sync')();
+
+let number = prompt("Give me a number: ")
+n = Number(number)
+
+function Fact(n){
+    if (n === 0 || n === 1){
+        return 1
+    }
+
+    if (n < 0) {
+        return undefined;
+    }
+    
+    return n * Fact(n-1)
+    // n! = n + (n-1)!
+}
+
+console.log(n + "! = " + Fact(n))
